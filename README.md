@@ -1,6 +1,10 @@
 # AnimalCLEF 2026 LAMPR Submission Code
 
-Notebook: `Lineage-Aware Markov Partition Refinement for Multi-Species Animal Re-Identification.ipynb`
+Paper notebook: `Lineage-Aware Markov Partition Refinement for Multi-Species Animal Re-Identification.ipynb`
+
+Method notebooks: `notebooks/`
+
+Source code: `src/`
 
 Team: Hanif Noer Rofiq
 

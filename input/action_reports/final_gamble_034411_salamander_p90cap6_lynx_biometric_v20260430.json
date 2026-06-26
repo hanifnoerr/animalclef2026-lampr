@@ -1,0 +1,73 @@
+{
+  "run_id": "final_gamble_034411_salamander_p90cap6_lynx_biometric_v20260430",
+  "base_submission": "C:\\Users\\Hanif\\Documents\\kaggle\\AnimalCLEF2026\\current_wildfusion_graph_v20260423\\submissions\\submission_034411_salamander_eva_aliked_mergeonly_v20260430.csv",
+  "output_submission": "C:\\Users\\Hanif\\Documents\\kaggle\\AnimalCLEF2026\\current_wildfusion_graph_v20260423\\submissions\\submission_FINAL_GAMBLE_034411_salamander_p90cap6_lynx_biometric_v20260430.csv",
+  "sha256": "95bb2caf42abd0c501590fb701af3263e2697f1f55c5d4750e241304ece3e68d",
+  "base_public_lb": "0.34411",
+  "changed_rows_vs_base": 236,
+  "lynx_actions": 13,
+  "salamander_actions": 34,
+  "sea_turtle_actions": 0,
+  "texas_actions": 0,
+  "rules": {
+    "lynx": "same-flank high-prob bridges OR local-biometric overrides; max component <= Lynx train p95 (~168)",
+    "salamander": "same-orientation calibrated global-probability rescue; match_prob>=0.90, eva_best01>=0.952, max component<=6",
+    "sea_turtle": "unchanged from 0.34411 because EVA/ALIKED SeaTurtle merge branch scored 0.33609",
+    "texas": "unchanged from 0.34411 / boundary split-only because it already gave positive public signal and has no labels"
+  },
+  "shape": [
+    {
+      "species": "LynxID2025",
+      "rows": 946,
+      "clusters": 116,
+      "base_clusters": 129,
+      "cluster_delta": -13,
+      "max_cluster_size": 111,
+      "base_max_cluster_size": 80,
+      "singletons": 31,
+      "base_singletons": 31,
+      "top10_sizes": "111 87 80 67 59 36 32 32 27 27"
+    },
+    {
+      "species": "SalamanderID2025",
+      "rows": 689,
+      "clusters": 432,
+      "base_clusters": 466,
+      "cluster_delta": -34,
+      "max_cluster_size": 6,
+      "base_max_cluster_size": 5,
+      "singletons": 291,
+      "base_singletons": 325,
+      "top10_sizes": "6 6 6 6 6 6 6 5 5 5"
+    },
+    {
+      "species": "SeaTurtleID2022",
+      "rows": 500,
+      "clusters": 166,
+      "base_clusters": 166,
+      "cluster_delta": 0,
+      "max_cluster_size": 13,
+      "base_max_cluster_size": 13,
+      "singletons": 60,
+      "base_singletons": 60,
+      "top10_sizes": "13 11 10 10 10 9 8 8 8 7"
+    },
+    {
+      "species": "TexasHornedLizards",
+      "rows": 274,
+      "clusters": 80,
+      "base_clusters": 80,
+      "cluster_delta": 0,
+      "max_cluster_size": 26,
+      "base_max_cluster_size": 26,
+      "singletons": 32,
+      "base_singletons": 32,
+      "top10_sizes": "26 17 15 13 11 9 9 9 7 7"
+    }
+  ],
+  "reports": {
+    "lynx_actions_csv": "C:\\Users\\Hanif\\Documents\\kaggle\\AnimalCLEF2026\\current_wildfusion_graph_v20260423\\reports\\final_gamble_034411_lynx_actions_v20260430.csv",
+    "salamander_actions_csv": "C:\\Users\\Hanif\\Documents\\kaggle\\AnimalCLEF2026\\current_wildfusion_graph_v20260423\\reports\\final_gamble_034411_salamander_actions_v20260430.csv",
+    "shape_csv": "C:\\Users\\Hanif\\Documents\\kaggle\\AnimalCLEF2026\\current_wildfusion_graph_v20260423\\reports\\final_gamble_034411_shape_report_v20260430.csv"
+  }
+}

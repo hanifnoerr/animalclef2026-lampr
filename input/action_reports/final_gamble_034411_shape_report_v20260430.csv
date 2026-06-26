@@ -1,0 +1,5 @@
+species,rows,clusters,base_clusters,cluster_delta,max_cluster_size,base_max_cluster_size,singletons,base_singletons,top10_sizes
+LynxID2025,946,116,129,-13,111,80,31,31,111 87 80 67 59 36 32 32 27 27
+SalamanderID2025,689,432,466,-34,6,5,291,325,6 6 6 6 6 6 6 5 5 5
+SeaTurtleID2022,500,166,166,0,13,13,60,60,13 11 10 10 10 9 8 8 8 7
+TexasHornedLizards,274,80,80,0,26,26,32,32,26 17 15 13 11 9 9 9 7 7
