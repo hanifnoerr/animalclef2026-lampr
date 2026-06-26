@@ -1,0 +1,5 @@
+*.csv text eol=lf
+*.ipynb text eol=lf
+*.md text eol=lf
+*.txt text eol=lf
+.gitattributes text eol=lf
