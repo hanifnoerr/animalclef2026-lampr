@@ -13,11 +13,11 @@ def repo_root():
     return Path(__file__).resolve().parents[1]
 
 
-def write_splice(output_name='species_hybrid.csv'):
+def write_splice(output_path=None):
     root = repo_root()
     species = pd.read_csv(root / 'input/source_components/test_species.csv')
-    sample = pd.read_csv(root / 'submission.csv')[['image_id']]
     shape = pd.read_csv(root / 'input/paper_submissions/shape_constrained_fusion_partition.csv')
+    sample = shape[['image_id']].copy()
     p06 = pd.read_csv(root / 'input/source_components/submission_p06_miewid_plus_mega_l384.csv')
     sources = {
         'LynxID2025': shape,
@@ -33,7 +33,7 @@ def write_splice(output_name='species_hybrid.csv'):
     out = sample.merge(pd.concat(parts, ignore_index=True), on='image_id', how='left')
     if out.cluster.isna().any():
         raise ValueError('missing cluster labels')
-    output = root / 'paper_submissions' / output_name
+    output = Path(output_path) if output_path is not None else root / 'paper_submissions' / 'species_hybrid.csv'
     output.parent.mkdir(parents=True, exist_ok=True)
     out.to_csv(output, index=False, quoting=csv.QUOTE_ALL, lineterminator='\r\n')
     return output, hashlib.sha256(output.read_bytes()).hexdigest()

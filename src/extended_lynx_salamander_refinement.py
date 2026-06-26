@@ -41,7 +41,7 @@ def label_key(label):
     return (str(label).rsplit('_', 1)[0], int(match.group(1)) if match else 10**9, str(label))
 
 
-def reproduce(output_name='extended_lynx_salamander_refinement.csv'):
+def reproduce(output_path=None):
     root = repo_root()
     base = pd.read_csv(root / 'input/paper_submissions/salamander_eva02_aliked_local_link_refinement.csv', dtype={'cluster': str})
     uf = UnionFind(base.cluster.unique())
@@ -59,7 +59,7 @@ def reproduce(output_name='extended_lynx_salamander_refinement.csv'):
             replacement[label] = chosen
     out = base.copy()
     out['cluster'] = out['cluster'].map(replacement)
-    output = root / 'paper_submissions' / output_name
+    output = Path(output_path) if output_path is not None else root / 'paper_submissions' / 'extended_lynx_salamander_refinement.csv'
     output.parent.mkdir(parents=True, exist_ok=True)
     out.to_csv(output, index=False, lineterminator='\r\n')
     return output, hashlib.sha256(output.read_bytes()).hexdigest()
